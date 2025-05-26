@@ -5,11 +5,10 @@ use rand::prelude::*;
 use argon2::{
     password_hash::{
         rand_core::OsRng,
-        PasswordHash, PasswordHasher, PasswordVerifier, SaltString
+        PasswordHasher, SaltString
     },
     Argon2
 };
-use argon2::Algorithm::Argon2id;
 use crate::crypto::CryptoType::Argon2 as A2;
 
 #[derive(Deserialize, Debug)]

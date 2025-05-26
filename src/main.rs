@@ -6,7 +6,7 @@ use rocket::response::status;
 use serde::Deserialize;
 use rocket::serde::json::Json;
 use crate::crypto::CryptoType;
-use crate::db::{add_user};
+use crate::db::add_user;
 
 #[derive(Deserialize, Debug)]
 struct UserRegister {
@@ -19,7 +19,7 @@ struct UserRegister {
 fn index() -> &'static str {
     "
     /register with {username, password, crypto_type}\n
-    crypto_types include: Plain, Hashed, HashedAndSalted
+    crypto_types include: Plain, Hashed, HashedAndSalted, Argon2
     "
 }
 
